@@ -6,6 +6,7 @@ import HoleList from '../pages/HoleList';
 import RunLog from '../pages/RunLog';
 import CoreBoxList from '../pages/CoreBoxList';
 import LithoEditor from '../pages/LithoEditor';
+import Handover from '../pages/Handover';
 
 function NotFound() {
   return (
@@ -33,6 +34,7 @@ export const routes: RouteObject[] = [
       { path: 'runs', element: <RunLog /> },
       { path: 'boxes', element: <CoreBoxList /> },
       { path: 'lithology', element: <LithoEditor /> },
+      { path: 'handover', element: <Handover /> },
       { path: '*', element: <NotFound /> },
     ],
   },
