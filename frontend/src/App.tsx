@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Layout, Menu, Spin, Typography, App as AntApp, Button, Space } from 'antd';
 import {
+  CloudSyncOutlined,
   CompassOutlined,
   DatabaseOutlined,
   DownloadOutlined,
@@ -25,6 +26,7 @@ const MENU_ITEMS = [
   { key: '/runs', icon: <BarsOutlined />, label: <Link to="/runs">回次记录</Link> },
   { key: '/boxes', icon: <ProfileOutlined />, label: <Link to="/boxes">岩芯箱</Link> },
   { key: '/lithology', icon: <ExperimentOutlined />, label: <Link to="/lithology">岩性编录</Link> },
+  { key: '/sync', icon: <CloudSyncOutlined />, label: <Link to="/sync">断网交接</Link> },
 ];
 
 /** 应用外壳：左侧导航 + 顶部导出备份，负责一次性的本地数据装载 */

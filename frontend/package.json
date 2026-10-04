@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --port 21811"
+    "preview": "vite preview --port 21811",
+    "pretest": "esbuild src/__tests__/sync.test.ts src/__tests__/upgrade.test.ts --bundle --platform=node --format=esm --outdir=dist-test --log-level=warning",
+    "test": "npm run pretest && node dist-test/sync.test.js && node dist-test/upgrade.test.js",
+    "test:setup": "npm install --no-save fake-indexeddb@^6"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
